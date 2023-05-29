@@ -14,3 +14,5 @@ jobs:
         server: ftp://157.245.98.118
         username: magento
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /var/www/html/pipeline/
+        dangerous-clean-slate: false
