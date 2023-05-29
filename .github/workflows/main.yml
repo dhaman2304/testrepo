@@ -10,11 +10,11 @@ jobs:
     
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-            username: 'magento'
-            server: '157.245.98.118'
-            port: '22'
-            local_path: ./* # default is ./*
-            remote_path: '/var/www/html/pipeline'
-            sftp_only: true
-            password: 'Test@123'
+      with:
+        username: 'magento'
+        server: '157.245.98.118'
+        port: '22'
+        local_path: ./* # default is ./*
+        remote_path: '/var/www/html/pipeline'
+        sftp_only: true
+        password: 'Test@123'
