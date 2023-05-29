@@ -11,9 +11,9 @@ jobs:
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.2.1
       with:
-        server: ftp://157.245.98.118
-        port: 22 # default is 22
         username: root
+        server: 157.245.98.118
+        port: 22 # default is 22
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         # will put all file under this path
         local_path: ./* # default is ./*
