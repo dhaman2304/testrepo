@@ -1,3 +1,2 @@
 <?php
-echo "sample file test";
-?>
+echo "sample file test by Dhaman-Dharmesh";
