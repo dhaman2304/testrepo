@@ -8,9 +8,17 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: SFTP Deploy
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.1
       with:
         server: ftp://157.245.98.118
+        port: 22 # default is 22
         username: magento
         password: ${{ secrets.FTP_PASSWORD }}
+        # will put all file under this path
+        local_path: ./* # default is ./*
+        # files will copy to under remote_path
+        remote_path: /var/www/html/pipeline
+        
+        # sftp args
+        args: '-o ConnectTimeout=5'
